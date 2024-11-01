@@ -1,0 +1,20 @@
+checks:
+  - name: Downstream Lineage Diff
+    type: lineage_diff
+
+  - name: Downstream Schema Diff
+    type: schema_diff
+
+  - name: Downstream Row Count Diff
+    type: row_count_diff
+    params:
+      select: state:modified,config.materialized:table
+
+  - name: Project Evaluator
+    type: simple
+
+  - name: YML linter
+    type: simple
+
+  - name: SQL linter
+    type: simple
