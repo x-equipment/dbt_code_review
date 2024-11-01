@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "schema_version": "v0",
+    "recce_version": "0.39.0",
+    "generated_at": "0000-00-00T00:00:00Z"
+  },
+  "checks": [
+    {
+      "name": "simple",
+      "description": "",
+      "type": "simple",
+      "is_checked": false,
+      "is_preset": false
+    }
+  ]
+}
