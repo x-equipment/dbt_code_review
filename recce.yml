@@ -1,20 +1,24 @@
 checks:
   - name: Downstream Lineage Diff
+    description: Check for any differences in the downstream data lineage.
     type: lineage_diff
 
   - name: Downstream Schema Diff
+    description: Verify schema differences for all nodes in the project.
     type: schema_diff
 
   - name: Downstream Row Count Diff
+    description: Validate row count differences for all table models.
     type: row_count_diff
-    params:
-      select: state:modified,config.materialized:table
 
   - name: Project Evaluator
+    description: Run the Project Evaluator on this project and provide a summary of findings.
     type: simple
 
-  - name: YML linter
+  - name: YML Linter
+    description: Run the YML Linter to check for consistency and best practices, and provide findings here.
     type: simple
 
-  - name: SQL linter
+  - name: SQL Linter
+    description: Run the SQL Linter to ensure consistent and correct SQL syntax, and post the findings here.
     type: simple
